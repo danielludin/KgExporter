@@ -2,11 +2,11 @@
 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>ch.gpb.elexis.KgExporter</groupId>
+    <groupId>ch.gpb.elexis</groupId>
     <artifactId>master_pom</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
-  <artifactId>ch.gpb.elexis.p2site</artifactId>
+  <artifactId>ch.gpb.elexis.KgExporter.p2site</artifactId>
   <packaging>eclipse-repository</packaging>
     <build>
       <plugins>
