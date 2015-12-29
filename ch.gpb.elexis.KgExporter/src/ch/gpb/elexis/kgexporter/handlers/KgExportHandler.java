@@ -91,8 +91,6 @@ public class KgExportHandler extends AbstractHandler {
 		String msg = "Exporting Patient with ID: " + patient.getId();
 		final KgExportWizard kgExportWizard = new KgExportWizard();
 
-		//activeShell = HandlerUtil.getActiveShell(event);
-
 		WizardDialog wizardDialog = new WizardDialog(activeShell, kgExportWizard);
 		wizardDialog.setTitle(msg);
 
@@ -114,16 +112,6 @@ public class KgExportHandler extends AbstractHandler {
 	return null;
     }
 
-    /**
-     * Eliminate characters illegal in windows filenames
-     * @param name
-     * @return
-     */
-    public String sanitizeFilename(String name) {
-	return name.replaceAll("[:\\\\/*?|<>]", "_");
-    }
-
-    // TODO: execute this asynchronically
     private void export(String exportPath, HashMap<String, Boolean> selectedCategories, String footerText) {
 
 	// EXPORT DIAGNOSELISTE
@@ -170,7 +158,7 @@ public class KgExportHandler extends AbstractHandler {
 		    if (ext.length() == 0) {
 			System.out
 				.println("TextView.openDocument no extension found for mime type: " + brief.getMimeType() + "  Titel:" + brief.getBetreff()); //$NON-NLS-1$
-			ext = "odt"; //$NON-NLS-1$
+			ext = "odt";
 		    }
 
 		    File fDestBrief = new File(subdirBriefe, String.valueOf(count++) + "-" + brief.getBetreff().trim()
@@ -428,5 +416,13 @@ public class KgExportHandler extends AbstractHandler {
 	return ret;
     }
 
+    /**
+     * Eliminate characters illegal in windows filenames
+     * @param name
+     * @return
+     */
+    public String sanitizeFilename(String name) {
+	return name.replaceAll("[:\\\\/*?|<>]", "_");
+    }
 
 }

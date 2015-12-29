@@ -23,7 +23,7 @@ public class DateUtil {
 	    date = df.parse(sDate);
 	} catch (ParseException e) {
 	    log.error("Error converting date: " + e.getMessage());
-	    System.out.println("Error converting date: " + e.getMessage());
+	    //System.out.println("Error converting date: " + e.getMessage());
 	}
 	return date;
 

@@ -126,7 +126,7 @@ public class HeaderFooterPageEvent extends PdfPageEventHelper {
     public void onParagraph(PdfWriter paramPdfWriter, Document paramDocument, float paramFloat) {
 	//super.onParagraph(paramPdfWriter, paramDocument, paramFloat);
 
-	System.out.println("paramFloat:" + paramFloat);
+	//System.out.println("paramFloat:" + paramFloat);
 	if (paramFloat < 200f) {
 	    paramDocument.newPage();
 

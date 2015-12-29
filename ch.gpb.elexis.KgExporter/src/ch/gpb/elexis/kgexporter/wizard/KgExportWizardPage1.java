@@ -122,8 +122,6 @@ public class KgExportWizardPage1 extends WizardPage implements IWizardPage {
 
 	for (Object key : sortedCats) {
 	    String sCatName = key.toString();
-	    System.out.println("category: " + sCatName);
-
 	    Button bField = new Button(container, SWT.CHECK);
 	    bField.addSelectionListener(cl);
 
@@ -135,7 +133,6 @@ public class KgExportWizardPage1 extends WizardPage implements IWizardPage {
 
 	bSelectAll = new Button(container, SWT.CHECK);
 	bSelectAll.setForeground(COLOR_RED);
-	//bSelectAll.setBackground(COLOR_RED);
 
 	GridData gd_bSelectAll = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
 	gd_bSelectAll.verticalIndent = 20;
@@ -207,7 +204,6 @@ public class KgExportWizardPage1 extends WizardPage implements IWizardPage {
     public HashMap<String, Boolean> getSelectedCategories() {
 	HashMap<String, Boolean> selectedCats = new HashMap<>();
 	for (Button b : dynButtonList) {
-	    //selectedCats.put((String) b.getData(), String.valueOf(b.getSelection()));
 	    selectedCats.put((String) b.getData(), b.getSelection());
 	}
 
