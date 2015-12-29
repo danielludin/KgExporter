@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/ch.gpb.elexis.cst.feature_1.0.0.qualifier.jar" id="ch.gpb.elexis.cst.feature" version="1.0.0.qualifier">
-      <category name="clinicrecordkeeping"/>
-   </feature>
-   <feature url="features/ch.gpb.elexis.cst.feature.source_3_1.0.0.qualifier.jar" id="ch.gpb.elexis.cst.feature" version="1.0.0.qualifier">
+   <feature url="features/ch.gpb.elexis.KgExporter.feature_1.0.0.qualifier.jar" id="ch.gpb.elexis.KgExporter.feature" version="1.0.0.qualifier">
       <category name="sources"/>
    </feature>
-
+   <bundle id="ch.gpb.elexis.KgExporter" version="1.0.0.qualifier">
+      <category name="clinicrecordkeeping"/>
+   </bundle>
    <category-def name="sources" label="Quelldateien für Elexis"/>
    <category-def name="clinicrecordkeeping" label="KG-Führung">
       <description>
