@@ -47,7 +47,7 @@ public class PdfHandler {
     static com.lowagie.text.Font fontTimesTitle;
     static Rectangle rect = new Rectangle(30, 30, 559, 800);
 
-    // 
+    //  
     static {
 	try {
 	    BaseFont bf_helv = BaseFont.createFont(BaseFont.HELVETICA, "Cp1252", true);
